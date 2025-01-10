@@ -26,26 +26,43 @@
     npm run dev
 ```
 
-### Setup instructions for tailwind
+### Setup instructions for tailwind css
+
+- Searching This was and install all
+
+```
+1 -> https://tailwindcss.com/docs/installation
+2 -> https://tailwindcss.com/docs/guides/vite
+```
 
 [Tail wind oficial instruction doc](https://tailwindcss.com/docs/installation)
 
 1. Install tailwindcss
 
 ```
-    npm install -D tailwindcss
+    npm install -D tailwindcss postcss autoprefixer 
+    
+    -> (this is perfect for installation)
 ```
 
 2. Create tailwind config file
 
 ```
-    npx tailwindcss init
+    2.a -> npx tailwindcss init
+    
+    2.b -> { npx tailwindcss init -p }
 ```
+2.a -> { npx tailwindcss init -p }
 
 3. Add file extension to tailwind config file in the contents property
 
 ```
-    content: ["./src/**/*.{html,js,jsx,ts,tsx}"]
+    content: [
+        "./index.html",
+        "./src/**/*. {html,js,jsx,ts,tsx}"
+    ]
+    -> (this 
+    is perfect for adding)
 ```
 
 4. Add the tailwind directives at the top of the `index.css` file
