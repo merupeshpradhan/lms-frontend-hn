@@ -50,6 +50,8 @@ function Signup() {
 
   async function createNewAccount(event) {
     event.preventDefault();
+    console.log(signupData);
+
     if (
       !signupData.email ||
       !signupData.password ||
@@ -96,8 +98,7 @@ function Signup() {
     // dispatch create account action
     const response = await dispatch(createAccount(formData));
     console.log(response);
-    if (response?.payload?.success) 
-      navigate("/");
+    if (response?.payload?.success) navigate("/");
 
     setSignupData({
       fullName: "",
@@ -110,7 +111,7 @@ function Signup() {
 
   return (
     <HomeLayout>
-      <div className="flex items-center justify-center h-[90vh]">
+      <div className="flex items-center justify-center h-[100vh]">
         <form
           noValidate
           onSubmit={createNewAccount}
