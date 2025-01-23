@@ -4,7 +4,7 @@ import { getAllCourses } from "../../Redux/Slices/CourseSlice";
 import HomeLayout from "../../Layouts/HomeLayout";
 import CourseCard from "../../Components/CourseCard";
 
-function CourseList(params) {
+function CourseList({params}) {
   const dispatch = useDispatch();
 
   const { courseData } = useSelector((state) => state.course);
