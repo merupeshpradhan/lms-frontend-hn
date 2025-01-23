@@ -199,7 +199,7 @@ function CreateCourse() {
             className="w-full bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300 rounded-sm py-2 font-semibold text-lg cursor-pointer"
             type="submit"
           >
-            {!initialCourseData.newCourse ? "Update Course" : "Create Course"}
+            {/* {!initialCourseData.newCourse ? "Update Course" : "Create Course"} */}
           </button>
         </form>
       </div>
