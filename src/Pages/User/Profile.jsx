@@ -1,11 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
 import HomeLayout from "../../Layouts/HomeLayout";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { cancelCourseBundle } from "../../Redux/Slices/RazorpaySlice";
+import { getUserData } from "../../Redux/Slices/AuthSlice";
+import toast from "react-hot-toast";
 
 function Profile() {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const userData = useSelector((state) => state?.auth?.data);
+
+  async function handleCourseCancelSubscription() {
+    toast("Initiating cancellation");
+    await dispatch(cancelCourseBundle());
+    await dispatch(getUserData());
+    toast.success("Cancellation completed!");
+    navigate("/");
+  }
 
   return (
     <HomeLayout>
