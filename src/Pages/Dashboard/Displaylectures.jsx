@@ -39,7 +39,10 @@ function Displaylectures() {
           Course Name : {state?.title}
         </h1>
 
-        {/* also using this one for all next div  {lectures && lectures.length > 0 &&  */}
+        {/* 
+            also using this one for all next div 
+           {lectures && lectures.length > 0 &&   
+       */}
         <div className="flex justify-center gap-10 w-full">
           {/* left section for playing the video and displaying course details to admin */}
           <div className="space-y-5 w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black]">
